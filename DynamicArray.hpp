@@ -131,7 +131,7 @@ public:
 		return *this;
 	};
 
-	dynArray& operator+(dynArray const& r) {
+	dynArray& operator+=(dynArray const& r) {
 		this->append(r);
 		return *this;
 	}
