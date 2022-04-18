@@ -8,7 +8,9 @@ Arrays will always be resized to powers of 2.
 
 Empty init creates an array of size 0. Don't do anything with this, it won't work.
 
-Initialization with a value will reserve space for values to be pushed back. Direct resizing will be added later.
+Initialization with a value will directly resize the array to the given value.
+
+Initialization with a value and *true* will reserve space for values to be pushed back.
 
 ``push()`` and ``pop()`` work like a regular stack, ``append()`` will add an array to the end of the existing array.
 
