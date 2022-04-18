@@ -16,11 +16,17 @@ public:
 
 	//-----[Constructors/Destructors]-------------------------------------------------------------------
 
-	dynArray() :		   basePtr(nullptr), length(0),      trueSize(0), reserved(false), idx(0) {}	//	Regular
-	dynArray(int length) : basePtr(nullptr), length(length), trueSize(0), reserved(true),  idx(0) {		//	Reserve
+	dynArray() :		   basePtr(nullptr), length(0),      trueSize(0), reserved(false), idx(0) {}			//	Empty
+	dynArray(int length) : basePtr(nullptr), length(length), trueSize(0), reserved(false),  idx(0) {			//	Regular
 
-		if (this->length == 0) this->length = 1;
-		if (!doAlloc(this, this->length)) printf("Memory allocation failed.\n");
+		if (this->length == 0) {}
+		else if (!doAlloc(this, this->length)) printf("Memory allocation failed.\n");
+
+	}
+	dynArray(int length, true) : basePtr(nullptr), length(length), trueSize(0), reserved(true), idx(0) {			//	Reserve
+
+		if (this->length == 0) {}
+		else if (!doAlloc(this, this->length)) printf("Memory allocation failed.\n");
 
 	}
 	~dynArray() { if (this->basePtr) free(this->basePtr); }
