@@ -24,7 +24,8 @@ public:
 
 	}
 	dynArray(int length, bool t) : basePtr(nullptr), length(length), trueSize(0), reserved(true), idx(0) {			//	Reserve
-
+		
+		if (!t) reserved = false;
 		if (this->length == 0) {}
 		else if (!doAlloc(this, this->length)) printf("Memory allocation failed.\n");
 
