@@ -1,5 +1,5 @@
 # DynamicArray
-Basically ended up recreating the standard vector, but I assume it's worse because I can't outcode the standard lib typewriter monkeys.
+Basically ended up recreating the standard vector, but I assume it's worse because I can't outcode the standard lib.
 
 Basic Info
 ----------
