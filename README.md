@@ -6,20 +6,18 @@ Basic Info
 A basic array wrapper so I don't have to deal with malloc and calloc and whatnot by hand. Has similar functionality to ``std::vector``. 
 Arrays will always be resized to powers of 2.
 
-Empty init creates an array of size 0. Don't do anything with this, it won't work.
+Empty init creates an array of size 0.
 
 Initialization with a value will directly resize the array to the given value.
 
-Initialization with a value and *true* will reserve space for values to be pushed back.
-
-``push()`` and ``pop()`` work like a regular stack, ``append()`` will add an array to the end of the existing array.
+``push()`` and ``pop()`` work like a regular stack, ``append()`` will add a value or an array to the end of the existing array.
 
 There are also a bunch of operator overloads you can check out.
 
 Example
 ----------
 ```
-  dynArray<int> arrRegular(3);					//	Regular int[3], wrapped
+  	dynArray<int> arrRegular(3);				//	Regular int[3], wrapped
 	dynArray<int> arrDefault;				//	Empty array
 	dynArray<int> arrList({ 10, 11, 12 });			//	Copy of the given array
 											
