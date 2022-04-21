@@ -18,6 +18,7 @@ There are also a bunch of operator overloads you can check out.
 
 Example
 ----------
+```
   dynArray<int> arrRegular(3);			      //	Regular int[3], wrapped
   dynArray<int> arrDefault;				        //	Empty array
   dynArray<int> arrList({ 10, 11, 12 });	//	Copy of the given array
@@ -41,8 +42,11 @@ Example
   										          
   arrFill.resize(5, true);			          //	Resize and clamp array (new array is created)
   printDynArray(arrFill);         
+```
 
 Output
 ----------
+```
   1 2 3 4 5 6 7 8 9 10 11 12
   1 2 3 4 5
+```
