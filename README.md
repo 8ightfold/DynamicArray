@@ -19,12 +19,12 @@ There are also a bunch of operator overloads you can check out.
 Example
 ----------
 ```
-  dynArray<int> arrRegular(3);			//	Regular int[3], wrapped
+  dynArray<int> arrRegular(3);					//	Regular int[3], wrapped
 	dynArray<int> arrDefault;				//	Empty array
-	dynArray<int> arrList({ 10, 11, 12 });	//	Copy of the given array
+	dynArray<int> arrList({ 10, 11, 12 });			//	Copy of the given array
 											
-	arrDefault.push(1);						//	Add 1 to back
-	arrDefault.append({ 2, 3, 4, 5 });		//	Attach array to back
+	arrDefault.push(1);					//	Add 1 to back
+	arrDefault.append({ 2, 3, 4, 5 });			//	Attach array to back
 	int i = arrDefault.pop();				//	Take value off back
 	
 	arrRegular[0] = 4;
